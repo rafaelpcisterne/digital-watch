@@ -1,0 +1,86 @@
+/**
+    DEV FullStack
+    Rafael P. Cisterne
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(180deg, #000000, #594e4e);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    width: 650px;
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+}
+
+.clock div {
+    height: 200px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: rgba(163, 24, 24, .3);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 7px;
+    letter-spacing: 3px;
+}
+
+.clock span {
+    font-weight: bolder;
+    font-size: 80px;
+}
+
+.clock span.time {
+    font-size: 14px;
+}
+
+@media (max-width: 720px) {
+    .clock {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+        margin: 0 5%;
+    }
+
+    .clock div {
+        flex-basis: 100%;
+        flex-direction: initial;
+    }
+
+    .clock div:nth-child(2){
+        margin: 20px 0;
+    }
+
+    .clock span.time {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 330px) {
+    .clock div {
+        flex-direction: column;
+    }
+
+    .clock span.time {
+        font-size: 14px;
+        margin-left: 0;
+    }
+}
